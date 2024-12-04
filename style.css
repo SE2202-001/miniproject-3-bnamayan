@@ -1,0 +1,265 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* I am not going to lie to you, all of these styles are AI-generated.*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #FF6347;
+    /* Tomato color */
+    margin-bottom: 40px;
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #FFA07A;
+}
+
+/* Upload Section */
+.upload-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.upload-section label {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.upload-section input[type="file"] {
+    padding: 8px 12px;
+    font-size: 1em;
+    border: 2px solid #FF6347;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-section input[type="file"]:hover {
+    background-color: #FFEFEB;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    background-color: #FFE4E1;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.filters,
+.sorting {
+    display: flex;
+    align-items: center;
+}
+
+.filters label,
+.sorting label {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    color: #FF4500;
+}
+
+.filters select,
+.sorting select {
+    margin-right: 20px;
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #FF6347;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+.filters select:focus,
+.sorting select:focus {
+    outline: none;
+    border-color: #FF4500;
+}
+
+/* Job List */
+.job-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    transition: margin-right 0.3s ease;
+}
+
+.job-list.shifted {
+    margin-right: 400px;
+}
+
+.job-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1 1 calc(33% - 40px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Removed the shifting effect */
+
+.job-item:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.job-item h2 {
+    font-size: 1.5em;
+    color: #FF6347;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.job-item p {
+    color: #555;
+    font-size: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+/* Job Details */
+.job-details {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: right 0.5s ease;
+    border-left: 5px solid #FF6347;
+}
+
+.job-details.active {
+    right: 0;
+}
+
+.job-details h2 {
+    color: #FF6347;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.job-details p {
+    margin-bottom: 15px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.job-details p strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #FF6347;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: #FF4500;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #FFE4E1;
+    color: #FF6347;
+    font-weight: bold;
+    border-top: 2px solid #FF6347;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFE4E1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF6347;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FF4500;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .job-item {
+        flex: 1 1 calc(50% - 40px);
+    }
+
+    .job-list,
+    .job-list.shifted {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filters,
+    .sorting {
+        margin-bottom: 10px;
+    }
+
+    .job-item {
+        flex: 1 1 100%;
+    }
+
+    .job-details {
+        width: 100%;
+    }
+}
