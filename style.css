@@ -152,8 +152,8 @@ h1 {
 .job-details {
     position: fixed;
     top: 0;
-    right: -400px;
-    width: 400px;
+    right: -550px;
+    width: 550px;
     height: 100%;
     background-color: #fff;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
